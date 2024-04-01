@@ -1,69 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitatioullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur porro alias, neque accusamus magnam dolor, et vitae deserunt recusandae qui quasi? Quaerat quisquam minus dignissimos necessitatibus maiores incidunt ullam ratione explicabo aspernatur numquam, consequatur, quasi laboriosam debitis corrupti. Voluptas minus beatae mollitia autem, ullam error doloribus explicabo maxime dolorum ut fugit earum vel repudiandae recusandae cumque nulla minima facilis provident.</p>
-	<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus at cupiditate repellendus odit rerum, enim temporibus maiores dolorum laudantium architecto voluptatibus molestias excepturi ab quidem veritatis esse blanditiis eum quae beatae aliquam omnis eaque. Magnam provident aperiam esse vel fuga, nesciunt voluptate beatae fugiat recusandae nulla nobis error repellendus sed.</p>
-
-	<h1>It's Heading 1</h1>
-	<h2>It's Heading 2</h2>
-	<h3>It's Heading 3</h3>
-	<h4>It's Heading 4</h4>
-	<h5>It's Heading 5</h5>
-	<h6>It's Heading 6</h6>
-
-	<a href="animal.html">Animal</a>
-	<a href="https://www.w3schools.com/tags/att_a_target.asp" target="_blank">W3S</a>
-	<hr>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/Gdz46esVmCg?si=d3sohTu1KgL1HzOd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>	
-
-	<hr>
-
-	<h3>Order List</h3>
-	<ol>
-		<li>Tea</li>
-		<li>Coffe</li>
-		<ul>
-			<li>Cold</li>
-			<li>Hot</li>
-		</ul>
-		<li>Milk</li>
-	</ol>
-
-	<h3>Unorder List</h3>
-	<ul type="disk">
-		<li>Banana</li>
-		<ol>
-			<li>Ripe</li>
-			<li>Green</li>
-		</ol>
-		<li>Apple</li>
-		<li>Orange</li>
-	</ul>
-
-	<h3>Describe List</h3>
-	<dl>
-		<dt>Water</dt>
-		<dd>water is Called Life.About 70% of our body remain water.</dd>
-		<dt>Tea</dt>
-		<dd>Tea is most popular drink in the World</dd>
-	</dl>
-	<hr>
-
-
-
+    <div class="container">
+        <div class="row div_size py-3 mt-3">
+            <div class="col">
+                <h1 class="display-4 py-2 text-center">To Do List Manager</h1>
+            </div>
+        
+        </div>
+        <div class="row div_size py-3">
+            <div class="col">
+                <h2>Avilable Task</h2>
+                <ul id="product-list">
+                    <li>
+                        <span id="mark1">Web Programming CLP</span>
+                        <button class="btn btn-sm btn-outline-success my-1" onclick="addToCart('Web Programming CLP')">Add to List</button><span class="check-Mark"><input  onclick="mark_task1()" type="checkbox" name="mark" id="m1"></span><span id="done_ms1"></span>
+                    </li>
+                    <li>
+                        <span id="mark2">AI Lab-Report</span>
+                        <button class="btn btn-sm btn-outline-success my-1" onclick="addToCart('AI Lab-Report')">Add to List</button><span class="check-Mark" ><input onclick="mark_task2()"  type="checkbox" name="mark" id="m2"></span><span id="done_ms2"></span>
+                    </li>
+                    <li>
+                        <span id="mark3">ISD Assignment</span>
+                        <button class="btn btn-sm btn-outline-success my-1" onclick="addToCart('ISD Assignment')">Add to List</button><span class="check-Mark" ><input onclick="mark_task3()" type="checkbox" name="mark" id="m3"></span><span id="done_ms3"></span>
+                    </li>
+                    <li>
+                        <span id="mark4">Cyber Security CT</span>
+                        <button class="btn btn-sm btn-outline-success my-1" onclick="addToCart('Cyber Security CT')">Add to List</button><span class="check-Mark"><input onclick="mark_task4()" type="checkbox" name="mark" id="m4"></span><span id="done_ms4"></span>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="row div_size py-3">
+            <div class="col">
+                <h2>List of Task</h2>
+                <ol id="cart">
+                </ol>
+            </div>
+           
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
